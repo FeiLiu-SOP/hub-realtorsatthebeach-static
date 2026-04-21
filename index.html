@@ -1,0 +1,763 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="Realtors At The Beach">
+  <meta name="keywords" content="Realtors At The Beach">
+  <meta name="description" content="Realtors At The Beach in Myrtle Beach and The Entire Grand Strand Area at RealtorsAtTheBeach.com Real Estate Houses Land Apartments Condos Townhouses">
+  <title>Realtors At The Beach | Myrtle Beach and The Entire Grand Strand Area | RealtorsAtTheBeach.com</title>
+  <style>
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      font-family: verdana, sans-serif;
+      margin: 0 auto;
+      max-width: 930px;
+    }
+    .top-nav-wrap {
+      max-width: 969px;
+      margin: 0 auto;
+      background: #e2e8f0;
+      font-family: verdana, sans-serif;
+      padding: 6px 10px;
+      box-sizing: border-box;
+    }
+    .top-nav-dropdown {
+      display: inline-block;
+      position: relative;
+      font-size: 12px;
+      font-weight: 700;
+      color: #1e293b;
+      cursor: pointer;
+    }
+    .top-nav-label {
+      padding: 4px 8px;
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    .top-nav-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 240px;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      z-index: 30;
+      margin-top: 4px;
+    }
+    .top-nav-menu a {
+      display: block;
+      padding: 7px 10px;
+      color: #1e293b;
+      text-decoration: none;
+      border-bottom: 1px solid #e2e8f0;
+      white-space: nowrap;
+    }
+    .top-nav-menu a:last-child {
+      border-bottom: 0;
+    }
+    .top-nav-dropdown:hover .top-nav-menu {
+      display: block;
+    }
+    .service-card {
+      border: 2px solid #d9d9d9;
+      background: #f9fbff;
+      padding: 12px;
+      box-sizing: border-box;
+      min-height: 150px;
+    }
+    .service-title {
+      font-size: 15px;
+      color: #0b2d5c;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .service-desc {
+      font-size: 12px;
+      color: #333;
+      line-height: 1.45;
+      min-height: 46px;
+    }
+    .service-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 10px;
+      border: 1px solid #003f99;
+      background: #e7f0ff;
+      color: #003f99;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .compliance-module {
+      margin: 12px auto 0 auto;
+      max-width: 930px;
+      border: 1px solid #c8ced6;
+      background: #f7f7f7;
+      padding: 10px 12px;
+      box-sizing: border-box;
+      font-family: verdana, sans-serif;
+    }
+    .compliance-title {
+      font-size: 14px;
+      color: #3a3a3a;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .compliance-text {
+      font-size: 12px;
+      color: #4a4a4a;
+      line-height: 1.45;
+    }
+    .tunnel-wrap {
+      max-width: 930px;
+      margin: 10px auto 0 auto;
+      font-family: verdana, sans-serif;
+      text-align: left;
+    }
+    .tunnel-btn {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12px 16px;
+      border: 0;
+      background: #1e293b;
+      color: #ffffff;
+      font-weight: 900;
+      font-size: 14px;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      text-align: center;
+    }
+    .featured-wrap {
+      margin: 12px auto 0 auto;
+      max-width: 930px;
+      border: 0;
+      background: #ffffff;
+      padding: 10px;
+      box-sizing: border-box;
+      font-family: verdana, sans-serif;
+    }
+    .featured-title {
+      font-size: 13px;
+      font-weight: 900;
+      color: #0b2d5c;
+      margin-bottom: 8px;
+    }
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 10px;
+    }
+    .featured-card {
+      border: 0;
+      background: #f1f5f9;
+      border-radius: 6px;
+      padding: 8px;
+    }
+    .featured-city {
+      font-size: 12px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+    .featured-links a {
+      font-size: 11px;
+      margin-right: 6px;
+      white-space: nowrap;
+    }
+
+    /* Live Dispatch Registry (log-style module) */
+    .ldr-wrap {
+      margin: 0;
+      max-width: 100%;
+      font-family: Georgia, serif;
+    }
+    .network-health-wrap {
+      margin: 0 0 12px 0;
+      padding: 8px 10px;
+      background: #f8fafc;
+      border: 0;
+      font-family: verdana, sans-serif;
+    }
+    .network-health-title {
+      font-size: 12px;
+      font-weight: 900;
+      color: #334155;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .ldr-panel {
+      border: 0;
+      background: #F8FAFC;
+      border-radius: 0;
+      box-shadow: none;
+      overflow: hidden;
+    }
+    .ldr-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 12px;
+      background: #F8FAFC;
+      border-bottom: 0;
+    }
+    .ldr-head-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .ldr-pulse {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 rgba(34, 197, 94, 0.45);
+      -webkit-animation: ldrPulse 1.8s ease-out infinite;
+      animation: ldrPulse 1.8s ease-out infinite;
+    }
+    @-webkit-keyframes ldrPulse {
+      0% { -webkit-transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.40); }
+      70% { -webkit-transform: scale(1); box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+      100% { -webkit-transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+    }
+    @keyframes ldrPulse {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.40); }
+      70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+    }
+    .ldr-title {
+      font-size: 13px;
+      font-weight: 900;
+      color: #1E293B;
+      letter-spacing: 0.02em;
+      text-transform: none;
+    }
+    .ldr-meta {
+      font-size: 11px;
+      color: #64748B;
+      white-space: nowrap;
+    }
+    .ldr-body {
+      padding: 10px 12px 12px 12px;
+    }
+    .ldr-stream {
+      font-family: Georgia, serif;
+      font-size: 12px;
+      line-height: 1.55;
+      color: #1E293B;
+      background: #F8FAFC;
+      border: 0;
+      border-radius: 0;
+      padding: 4px 0;
+      height: 190px;
+      overflow: auto;
+    }
+    .ldr-line {
+      white-space: pre-wrap;
+      word-break: break-word;
+      margin: 0;
+      padding: 0;
+    }
+    .ldr-success { color: #166534; }
+    .ldr-active { color: #92400e; }
+    .ldr-resolved { color: #1e3a8a; }
+    .ldr-dim { color: #64748B; }
+    .ldr-foot {
+      margin-top: 8px;
+      font-size: 11px;
+      color: #64748B;
+      line-height: 1.45;
+    }
+    @media (max-width: 820px) {
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+      .service-card {
+        min-height: auto;
+      }
+      .service-desc {
+        min-height: auto;
+      }
+      .featured-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body text="#000000" link="#0000CC" vlink="#0000CC" alink="#cc0000" bgcolor="#331FF2" topmargin="0" leftmargin="0" rightmargin="0" marginheight="0">
+
+<table width="969" align="CENTER" cellpadding="0" cellspacing="0" border="0" bordercolor="#000000">
+  <tbody><tr>
+    <td valign="MIDDLE" align="left" bgcolor="#EEEEEE" height="30">
+      &nbsp; <font face="verdana" size="2"><b>National Property Protection &amp; Asset Maintenance Hub | Regional HQ: Myrtle Beach</b></font>
+    </td>
+  </tr></tbody>
+</table>
+
+<div class="top-nav-wrap">
+  <div class="top-nav-dropdown">
+    <span class="top-nav-label">COMMUNITY OUTREACH</span>
+    <div class="top-nav-menu">
+      <a href="/service-hub/">Asset Preservation</a>
+      <a href="/service-hub/">National Service Grid</a>
+      <a href="/water-damage/">Emergency Dispatch Protocol</a>
+    </div>
+  </div>
+</div>
+
+<table width="969" align="CENTER" border="0" cellpadding="10" cellspacing="0" bgcolor="#FFFFFF">
+  <tbody><tr><td>
+
+    <table width="100%" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+      <tbody><tr>
+        <td align="LEFT" valign="TOP">
+          <h1 style="font-size:14px; font-family:verdana; font-weight:900; margin:0;">
+            National Property Protection Network - Strategic Asset Maintenance &amp; Infrastructure Hub
+          </h1>
+        </td>
+      </tr></tbody>
+    </table>
+
+    <table><tbody><tr><td height="8"></td></tr></tbody></table>
+
+    <table align="CENTER" width="930">
+      <tbody><tr>
+        <td align="CENTER" valign="TOP">
+          <img src="./hero.webp" width="1200" height="400" alt="Coastal home">
+        </td>
+      </tr></tbody>
+    </table>
+
+    <div class="tunnel-wrap">
+      <a class="tunnel-btn" href="/service-hub/">[+] View All U.S. Service Locations</a>
+    </div>
+
+    <div class="featured-wrap">
+      <div class="featured-title">Featured Hubs (Core High-Value Cities)</div>
+      <div class="featured-grid">
+        <div class="featured-card"><div class="featured-city">Los Angeles, CA</div><div class="featured-links"><a href="/water-damage/">Water</a><a href="/siding-services/">Siding</a><a href="/plumbing/">Plumbing</a></div></div>
+        <div class="featured-card"><div class="featured-city">San Diego, CA</div><div class="featured-links"><a href="/water-damage/">Water</a><a href="/siding-services/">Siding</a><a href="/plumbing/">Plumbing</a></div></div>
+        <div class="featured-card"><div class="featured-city">San Francisco, CA</div><div class="featured-links"><a href="/water-damage/">Water</a><a href="/siding-services/">Siding</a><a href="/plumbing/">Plumbing</a></div></div>
+        <div class="featured-card"><div class="featured-city">San Jose, CA</div><div class="featured-links"><a href="/water-damage/">Water</a><a href="/siding-services/">Siding</a><a href="/plumbing/">Plumbing</a></div></div>
+        <div class="featured-card"><div class="featured-city">Seattle, WA</div><div class="featured-links"><a href="/water-damage/">Water</a><a href="/siding-services/">Siding</a><a href="/plumbing/">Plumbing</a></div></div>
+        <div class="featured-card"><div class="featured-city">Boston, MA</div><div class="featured-links"><a href="/water-damage/">Water</a><a href="/siding-services/">Siding</a><a href="/plumbing/">Plumbing</a></div></div>
+        <div class="featured-card"><div class="featured-city">Miami, FL</div><div class="featured-links"><a href="/water-damage/">Water</a><a href="/siding-services/">Siding</a><a href="/plumbing/">Plumbing</a></div></div>
+        <div class="featured-card"><div class="featured-city">Washington, DC</div><div class="featured-links"><a href="/water-damage/">Water</a><a href="/siding-services/">Siding</a><a href="/plumbing/">Plumbing</a></div></div>
+        <div class="featured-card"><div class="featured-city">Honolulu, HI</div><div class="featured-links"><a href="/water-damage/">Water</a><a href="/siding-services/">Siding</a><a href="/plumbing/">Plumbing</a></div></div>
+        <div class="featured-card"><div class="featured-city">Jersey City, NJ</div><div class="featured-links"><a href="/water-damage/">Water</a><a href="/siding-services/">Siding</a><a href="/plumbing/">Plumbing</a></div></div>
+      </div>
+    </div>
+
+    <table><tbody><tr><td height="12"></td></tr></tbody></table>
+
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="service-title">Water &amp; Flood Mitigation</div>
+        <div class="service-desc">Emergency water extraction and mold remediation.</div>
+        <a class="service-btn" href="/water-damage/">View Service Areas</a>
+      </div>
+      <div class="service-card">
+        <div class="service-title">Exterior Siding &amp; Cladding</div>
+        <div class="service-desc">Storm-resistant siding retrofit and structural cladding.</div>
+        <a class="service-btn" href="/siding-services/">View Service Areas</a>
+      </div>
+      <div class="service-card">
+        <div class="service-title">Master Plumbing &amp; Pipe Safety</div>
+        <div class="service-desc">Full-scale plumbing repair and leak detection.</div>
+        <a class="service-btn" href="/plumbing/">View Service Areas</a>
+      </div>
+    </div>
+
+    <div class="compliance-module">
+      <div class="compliance-title">Local Compliance &amp; Geological Context (Myrtle Beach Sector)</div>
+      <div class="compliance-text">
+        Domain origin reference: Horry County, SC (33.68, -78.88). Our historical data for Myrtle Beach (Avg Elevation: 26ft) informs our national mitigation standards for coastal and low-lying property risks.
+      </div>
+    </div>
+
+    <table><tbody><tr><td height="10"></td></tr></tbody></table>
+
+    <table width="100%" align="CENTER" cellpadding="0" cellspacing="0" border="0">
+      <tbody><tr>
+
+        <!-- Main trust list (kept) -->
+        <td width="640" valign="TOP" align="left" bgcolor="#FFFFFF">
+          <div class="network-health-wrap">
+            <div class="network-health-title">Network Infrastructure Health</div>
+            <div class="ldr-wrap" id="live-dispatch-registry">
+              <div class="ldr-panel">
+                <div class="ldr-head">
+                  <div class="ldr-head-left">
+                    <span class="ldr-pulse" aria-hidden="true"></span>
+                    <div class="ldr-title">Real-time Asset Protection Flow</div>
+                  </div>
+                  <div class="ldr-meta" id="ldr-meta">Registry sync: initializing…</div>
+                </div>
+                <div class="ldr-body">
+                  <div class="ldr-stream" id="ldr-stream" aria-label="Live dispatch registry log stream"></div>
+                  <div class="ldr-foot">
+                    Asset Preservation telemetry stream simulates operational cadence (dispatch, audit, resolution) and surfaces continuous status transitions for property risk mitigation coverage.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <center>
+            <font face="verdana" size="5"><b>Infrastructure Coordinators In Myrtle Beach &amp; The Grand Strand!</b></font><br>
+          </center>
+          <center>
+            <font face="verdana" size="2" color="#000000"><b>Listings That Have Been Added To The Main <img src="./assert/image-sc-state.jpg" height="20"><a href="https://www.businessatthebeach.com/southcarolina" title="South Carolina Directory - will open new window" target="_blank">SC Coastal Directory</a></b></font><br>
+            <font face="verdana" size="1" color="#FF0000"><b>Latest Added Showing First</b></font><br>
+          </center>
+
+          <table><tbody><tr><td height="8"></td></tr></tbody></table>
+
+          <table width="640" align="CENTER" border="0" bgcolor="#EEEEEE"><tbody><tr>
+            <td align="LEFT" valign="MIDDLE">
+              <img src="./assert/Filomena.jpg" height="60" align="LEFT" style="padding: 0px 15px 0px 0px;">
+              <table><tbody><tr><td height="3"></td></tr></tbody></table><b>Filomena Thompson - Re/max Above The Beach</b><br>3414 Hwy 701 S
+              Conway, South Carolina 29527
+            </td>
+            <td align="RIGHT" valign="MIDDLE">
+              <font face="verdana" size="1"><b><a href="https://www.businessatthebeach.com/filomena-thompson-realtor.shtml" title="Filomena Thompson Realtor - will open new window" target="_blank">VISIT PROFILE</a></b></font> &nbsp;
+            </td>
+          </tr></tbody></table>
+          <br>
+
+          <table width="640" align="CENTER" border="0" bgcolor="#EEEEEE"><tbody><tr>
+            <td align="LEFT" valign="MIDDLE">
+              <img src="./assert/Michael.jpg" height="60" align="LEFT" style="padding: 0px 15px 0px 0px;">
+              <table><tbody><tr><td height="3"></td></tr></tbody></table><b>Michael B. Rabon - Realty One Group Dockside</b><br>4209 Mayfair St, Ste A
+              Myrtle Beach, SC 29577
+            </td>
+            <td align="RIGHT" valign="MIDDLE">
+              <font face="verdana" size="1"><b><a href="https://www.businessatthebeach.com/michael-b-rabon-realtor.shtml" title="Michael B. Rabon - will open new window" target="_blank">VISIT PROFILE</a></b></font> &nbsp;
+            </td>
+          </tr></tbody></table>
+          <br>
+
+          <table width="640" align="CENTER" border="0" bgcolor="#EEEEEE"><tbody><tr>
+            <td align="LEFT" valign="MIDDLE">
+              <img src="./assert/Michele%20Rabon.jpg" height="60" align="LEFT" style="padding: 0px 15px 0px 0px;">
+              <table><tbody><tr><td height="3"></td></tr></tbody></table><b>Michelle Rabon - Coldwell Banker Chicora Adv</b><br>3888 Renee Drive Myrtle Beach, SC 29579
+            </td>
+            <td align="RIGHT" valign="MIDDLE">
+              <font face="verdana" size="1"><b><a href="https://www.businessatthebeach.com/michelle-rabon-real-estate-agent.shtml" title="Michelle Rabon - will open new window" target="_blank">VISIT PROFILE</a></b></font> &nbsp;
+            </td>
+          </tr></tbody></table>
+          <br>
+
+          <table width="640" align="CENTER" border="0" bgcolor="#EEEEEE"><tbody><tr>
+            <td align="LEFT" valign="MIDDLE">
+              <img src="./assert/cheryl%20woodward.jpg" height="60" align="LEFT" style="padding: 0px 15px 0px 0px;">
+              <table><tbody><tr><td height="3"></td></tr></tbody></table><b>Cheryl Woodward - Full Potential Real Estate</b><br>4201 Carolina Exchange Dr.
+              Myrtle Beach, SC 29579
+            </td>
+            <td align="RIGHT" valign="MIDDLE">
+              <font face="verdana" size="1"><b><a href="https://www.businessatthebeach.com/full-potential-real-estate.shtml" title="Cheryl Woodward with Full Potential Real Estate - will open new window" target="_blank">VISIT PROFILE</a></b></font> &nbsp;
+            </td>
+          </tr></tbody></table>
+          <br>
+
+          <table width="640" align="CENTER" border="0" bgcolor="#EEEEEE"><tbody><tr>
+            <td align="LEFT" valign="MIDDLE">
+              <img src="./assert/natalie.jpg" height="60" align="LEFT" style="padding: 0px 15px 0px 0px;">
+              <table><tbody><tr><td height="3"></td></tr></tbody></table><b>Natalie Rakoci - National Network Dispatcher</b><br>4336 Sea Mnt Hwy, Unit C Little River, SC 29566
+            </td>
+            <td align="RIGHT" valign="MIDDLE">
+              <font face="verdana" size="1"><b><a href="https://www.horrycountydirectory.com/natalie-rakoci-realtor.shtml" title="Natalie Rakoci - will open new window" target="_blank">VISIT PROFILE</a></b></font> &nbsp;
+            </td>
+          </tr></tbody></table>
+          <br>
+
+          <table width="640" align="CENTER" border="0" bgcolor="#EEEEEE"><tbody><tr>
+            <td align="LEFT" valign="MIDDLE">
+              <img src="./assert/kathy.jpg" height="60" align="LEFT" style="padding: 0px 15px 0px 0px;">
+              <table><tbody><tr><td height="3"></td></tr></tbody></table><b>Kathy Dulhagen - Coastal Home Group</b><br>1293 Professional Dr, Ste V21
+              Myrtle Beach, SC 29579<br>
+            </td>
+            <td align="RIGHT" valign="MIDDLE">
+              <font face="verdana" size="1"><b><a href="https://www.conwayliving.com/kathy-dulhagen-realtor.shtml" title="Kathy Dulhagen - will open new window" target="_blank">VISIT PROFILE</a></b></font> &nbsp;
+            </td>
+          </tr></tbody></table>
+          <br>
+
+          <table width="640" align="CENTER" border="0" bgcolor="#EEEEEE"><tbody><tr>
+            <td align="LEFT" valign="MIDDLE">
+              <img src="./assert/barbara.jpg" height="60" align="LEFT" style="padding: 0px 15px 0px 0px;">
+              <table><tbody><tr><td height="3"></td></tr></tbody></table><b>Barbara Powell - Beach &amp; Forest Realty</b><br>2701 N Kings Hwy Myrtle Beach, SC 29577 
+            </td>
+            <td align="RIGHT" valign="MIDDLE">
+              <font face="verdana" size="1"><b><a href="https://www.conwayliving.com/barbara-powell-real-estate.shtml" title="Barbara Powell - will open new window" target="_blank">VISIT PROFILE</a></b></font> &nbsp;
+            </td>
+          </tr></tbody></table>
+
+          <br><br>
+
+          <center>
+            <font face="verdana" size="3"><b>
+              Visit The Main <img src="./assert/image-sc-state.jpg" height="40"><a href="https://www.businessatthebeach.com/southcarolina" title="South Carolina Directory - will open new window" target="_blank">SC Coastal Directory</a><br>To View ALL COMPANIES BY CATEGORY
+            </b></font>
+          </center>
+
+          <table><tbody><tr><td height="10"></td></tr></tbody></table>
+
+          <div style="font-size:16px; font-family:verdana; color:#CC0000; font-weight:900; text-align:center;">Related Categories That You Might Be Interested In</div>
+          <div style="font-size:13px; font-family:verdana; font-weight:900; text-align:center; margin-top:6px;">
+            <a href="https://www.businessatthebeach.com/southcarolina/south-carolina-beach-attorneys-real-estate.shtml" title="Real Estate Attorneys - will open new window" target="_blank">Real Estate Attorneys</a> :
+            <a href="https://www.businessatthebeach.com/southcarolina/south-carolina-beach-mortgage-loan-originators.shtml" title="Mortgage Loan Originators - will open new window" target="_blank">Mortgage Loan Originators</a> :
+            <a href="https://www.businessatthebeach.com/southcarolina/south-carolina-beach-land-surveyors.shtml" title="Land Surveyors - will open new window" target="_blank">Land Surveyors</a> :
+            <a href="https://www.businessatthebeach.com/southcarolina/south-carolina-beach-home-inspectors.shtml" title="Home Inspectors - will open new window" target="_blank">Home Inspectors</a>
+          </div>
+
+          <div style="font-size:1px; line-height:1px; height:1px; overflow:hidden;">
+            <a href="/sitemap-index.xml">sitemap</a>
+          </div>
+        </td>
+
+        <td width="15"></td>
+
+        <!-- Mutation sidebar -->
+        <td width="250" valign="TOP" align="right" bgcolor="#FFFFFF">
+          <div style="border:0; padding:12px; text-align:center; font-family:verdana; background:#f1f5f9;">
+            <div style="font-size:14px; font-weight:900; color:#1e293b;">Command Center</div>
+            <table><tbody><tr><td height="6"></td></tr></tbody></table>
+            <a href="https://www.horrycountydirectory.com/natalie-rakoci-realtor.shtml" title="Natalie Rakoci - will open new window" target="_blank">
+              <img src="./assert/natalie.jpg" width="250" height="250" alt="Natalie Rakoci, Infrastructure Coordinator">
+            </a>
+            <div style="font-size:11px; font-weight:700; margin-top:4px;">Natalie Rakoci - National Network Dispatcher</div>
+            <div style="font-size:10px; margin-top:3px; color:#475569;">Senior Dispatch Coordinator (Myrtle Beach HQ)</div>
+            <div style="margin-top:6px; font-size:10px; color:#166534; font-weight:700;">
+              <span style="display:inline-block; width:8px; height:8px; border-radius:999px; background:#22c55e; margin-right:5px; vertical-align:middle;"></span>
+              Current Status: On-Duty (Active Dispatching)
+            </div>
+            <div style="margin-top:12px; font-size:16px; font-weight:900; color:#1e293b; text-align:center;">Emergency Dispatch Center</div>
+            <div style="margin-top:10px; font-size:13px; font-weight:700; text-align:center;">
+              Call 24/7: +1 (607) 400-9375
+            </div>
+            <div style="margin-top:12px; font-size:12px; font-weight:700; line-height:1.5;">
+              <a href="/water-damage/">Water Damage &amp; Mold Remediation</a><br>
+              <a href="/siding-services/">Siding &amp; Cladding Repair</a>
+            </div>
+          </div>
+        </td>
+
+      </tr></tbody>
+    </table>
+
+  </td></tr></tbody>
+</table>
+
+<script>
+  (function () {
+    var $stream = document.getElementById("ldr-stream");
+    var $meta = document.getElementById("ldr-meta");
+    if (!$stream) return;
+
+    function pad2(n) { return String(n).padStart(2, "0"); }
+    function formatTimestamp(d) {
+      var yyyy = d.getFullYear();
+      var mm = pad2(d.getMonth() + 1);
+      var dd = pad2(d.getDate());
+      var hh = pad2(d.getHours());
+      var mi = pad2(d.getMinutes());
+      var ss = pad2(d.getSeconds());
+      return yyyy + "-" + mm + "-" + dd + " " + hh + ":" + mi + ":" + ss;
+    }
+
+    function randInt(min, max) {
+      return Math.floor(min + Math.random() * (max - min + 1));
+    }
+
+    function parseCSV(text) {
+      function parseLine(line) {
+        var out = [];
+        var cur = "";
+        var inQuotes = false;
+        for (var i = 0; i < line.length; i++) {
+          var ch = line[i];
+          if (ch === '"') {
+            if (inQuotes && line[i + 1] === '"') {
+              cur += '"';
+              i++;
+            } else {
+              inQuotes = !inQuotes;
+            }
+            continue;
+          }
+          if (ch === "," && !inQuotes) {
+            out.push(cur);
+            cur = "";
+            continue;
+          }
+          cur += ch;
+        }
+        out.push(cur);
+        return out;
+      }
+
+      var lines = String(text || "").split(/\r?\n/).filter(Boolean);
+      if (lines.length < 2) return [];
+      var header = parseLine(lines[0]).map(function (x) { return String(x || "").trim().replace(/^"|"$/g, ""); });
+      var norm = function (s) {
+        return String(s || "")
+          .trim()
+          .toLowerCase()
+          .replace(/_/g, "-")
+          .replace(/[^a-z0-9-]+/g, "-")
+          .replace(/^-+|-+$/g, "");
+      };
+
+      var cityIdx = header.findIndex(function (h) { return norm(h) === "city"; });
+      var stateIdx = header.findIndex(function (h) { return norm(h) === "state"; });
+      if (cityIdx === -1) cityIdx = 0;
+      if (stateIdx === -1) stateIdx = 1;
+
+      var rows = [];
+      for (var i = 1; i < lines.length; i++) {
+        var parts = parseLine(lines[i]);
+        if (!parts.length) continue;
+        var city = String(parts[cityIdx] || "").trim().replace(/^"|"$/g, "");
+        var state = String(parts[stateIdx] || "").trim().replace(/^"|"$/g, "");
+        if (!city) continue;
+        if (!state) state = "US";
+        rows.push({ city: city, state: state });
+      }
+      return rows;
+    }
+
+    function appendLine(text, level) {
+      var div = document.createElement("div");
+      div.className = "ldr-line " + (level || "ldr-dim");
+      div.textContent = text;
+      $stream.appendChild(div);
+
+      // keep stream bounded
+      var maxLines = 120;
+      while ($stream.childNodes.length > maxLines) {
+        $stream.removeChild($stream.firstChild);
+      }
+
+      $stream.scrollTop = $stream.scrollHeight;
+    }
+
+    function buildRecord(ts, city, state, isRemote) {
+      var types = [
+        {
+          level: "ldr-success",
+          text: ts + " - STATUS: CONFIRMED - Water Mitigation Unit dispatched to " + city + ", " + state + "."
+        },
+        {
+          level: "ldr-active",
+          text: ts + " - ACTIVE: Siding Integrity Audit in progress - " + city + ", " + state + "."
+        },
+        {
+          level: "ldr-resolved",
+          text: ts + " - SERVICE COMPLETED: Emergency Pipe Safety repair completed - " + city + ", " + state + "."
+        }
+      ];
+      if (isRemote) {
+        return {
+          level: "ldr-dim",
+          text: ts + " - NODE: " + city + ", " + state + " - Siding Integrity Check Completed."
+        };
+      }
+      return types[randInt(0, types.length - 1)];
+    }
+
+    var csvUrl = "./data/city-home-values.csv";
+    var usCitiesUrl = "./data/uscities.csv";
+    var cityRows = [];
+    var remoteRows = [];
+    var logCounter = 0;
+    var injectEvery = 5;
+
+    function dedupeByCityState(rows) {
+      var seen = Object.create(null);
+      var out = [];
+      for (var i = 0; i < rows.length; i++) {
+        var r = rows[i];
+        if (!r || !r.city) continue;
+        var key = String(r.city).toLowerCase() + "|" + String(r.state || "").toLowerCase();
+        if (seen[key]) continue;
+        seen[key] = true;
+        out.push({ city: r.city, state: r.state || "US" });
+      }
+      return out;
+    }
+
+    function seedHistory() {
+      var now = new Date();
+      var count = 14;
+      for (var i = count; i >= 1; i--) {
+        var minsAgo = randInt(2, 55);
+        var d = new Date(now.getTime() - (minsAgo * 60 * 1000) - (i * 7000));
+        var isRemote = (logCounter % injectEvery === injectEvery - 1) && remoteRows.length > 0;
+        var sourceRows = isRemote ? remoteRows : cityRows;
+        var fallback = isRemote ? { city: "Addison", state: "TX" } : { city: "Myrtle Beach", state: "SC" };
+        var row = sourceRows.length ? sourceRows[randInt(0, sourceRows.length - 1)] : fallback;
+        var rec = buildRecord(formatTimestamp(d), row.city, row.state, isRemote);
+        appendLine(rec.text, rec.level);
+        logCounter++;
+      }
+    }
+
+    function scheduleNext() {
+      var minutes = randInt(2, 5);
+      if ($meta) $meta.textContent = "Registry sync: next update in ~" + minutes + " min";
+      window.setTimeout(function () {
+        var d = new Date();
+        var isRemote = (logCounter % injectEvery === injectEvery - 1) && remoteRows.length > 0;
+        var sourceRows = isRemote ? remoteRows : cityRows;
+        var fallback = isRemote ? { city: "Addison", state: "TX" } : { city: "Myrtle Beach", state: "SC" };
+        var row = sourceRows.length ? sourceRows[randInt(0, sourceRows.length - 1)] : fallback;
+        var rec = buildRecord(formatTimestamp(d), row.city, row.state, isRemote);
+        appendLine(rec.text, rec.level);
+        logCounter++;
+        scheduleNext();
+      }, minutes * 60 * 1000);
+    }
+
+    Promise.all([
+      fetch(csvUrl, { cache: "no-store" }).then(function (r) { return r.ok ? r.text() : ""; }).catch(function () { return ""; }),
+      fetch(usCitiesUrl, { cache: "no-store" }).then(function (r) { return r.ok ? r.text() : ""; }).catch(function () { return ""; })
+    ])
+      .then(function (res) {
+        cityRows = parseCSV(res[0]);
+        remoteRows = dedupeByCityState(parseCSV(res[1]));
+        if (!cityRows.length) cityRows = [{ city: "Myrtle Beach", state: "SC" }];
+        if (!remoteRows.length) {
+          remoteRows = [
+            { city: "Addison", state: "TX" },
+            { city: "Reno", state: "NV" },
+            { city: "Jersey City", state: "NJ" },
+            { city: "Boise", state: "ID" }
+          ];
+        }
+        appendLine(
+          formatTimestamp(new Date()) + " - INFO: Dispatch registry feed attached (" + cityRows.length + " primary nodes, " + remoteRows.length + " remote nodes).",
+          "ldr-dim"
+        );
+        seedHistory();
+        scheduleNext();
+      })
+      .catch(function () {
+        appendLine(formatTimestamp(new Date()) + " - WARN: Registry feed unavailable. Running in local simulation mode.", "ldr-active");
+        cityRows = [{ city: "Myrtle Beach", state: "SC" }];
+        remoteRows = [{ city: "Addison", state: "TX" }, { city: "Reno", state: "NV" }];
+        seedHistory();
+        scheduleNext();
+      });
+  })();
+</script>
+
+</body>
+</html>

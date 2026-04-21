@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>National Service Hub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Verdana, Arial, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 24px auto;
+      background: #fff;
+      border: 1px solid #dbe3ef;
+      padding: 18px;
+      box-sizing: border-box;
+    }
+    h1 {
+      margin: 0 0 6px 0;
+      font-size: 22px;
+      color: #0b2d5c;
+    }
+    .meta {
+      margin: 0 0 16px 0;
+      color: #475569;
+      font-size: 13px;
+    }
+    .toplinks {
+      margin: 0 0 16px 0;
+      font-size: 13px;
+    }
+    .toplinks a {
+      margin-right: 10px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px 14px;
+      padding-left: 18px;
+      margin: 0;
+    }
+    .grid li {
+      line-height: 1.4;
+    }
+    a {
+      color: #1d4ed8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 640px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>National Service Hub</h1>
+    <p class="meta">Browse all state service indexes.</p>
+    <div class="toplinks">
+      <a href="/">Home</a>
+      <a href="/water-damage/">Water Damage</a>
+      <a href="/siding-services/">Siding Services</a>
+      <a href="/plumbing/">Plumbing</a>
+    </div>
+
+    <ul class="grid" id="state-list">
+      <li>Loading state indexes...</li>
+    </ul>
+  </div>
+
+  <script>
+    (function () {
+      // Keep this list aligned with the folders under /service-hub/
+      var states = [
+        "alabama","alaska","arizona","arkansas","california","colorado","connecticut","delaware","district-of-columbia",
+        "florida","georgia","hawaii","idaho","illinois","indiana","iowa","kansas","kentucky","louisiana","maine",
+        "maryland","massachusetts","michigan","minnesota","mississippi","missouri","montana","nebraska","nevada",
+        "new-hampshire","new-jersey","new-mexico","new-york","north-carolina","north-dakota","ohio","oklahoma",
+        "oregon","pennsylvania","rhode-island","south-carolina","south-dakota","tennessee","texas","utah","vermont",
+        "virginia","washington","west-virginia","wisconsin","wyoming"
+      ];
+
+      function titleCase(slug) {
+        return slug.split("-").map(function (p) {
+          if (p === "of") return "of";
+          return p.charAt(0).toUpperCase() + p.slice(1);
+        }).join(" ");
+      }
+
+      var list = document.getElementById("state-list");
+      list.innerHTML = "";
+      for (var i = 0; i < states.length; i++) {
+        var st = states[i];
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.href = "/service-hub/" + st + "/";
+        a.textContent = titleCase(st);
+        li.appendChild(a);
+        list.appendChild(li);
+      }
+    })();
+  </script>
+</body>
+</html>
